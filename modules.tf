@@ -115,8 +115,7 @@ module "worker" {
   security-group-id = "${ module.security.worker-id }"
   subnet-ids = "${ module.vpc.subnet-ids-private }"
   volume_size = {
-    ebs = 250
-    root = 52
+    root = 30
   }
   vpc-id = "${ module.vpc.id }"
   worker-name = "general"

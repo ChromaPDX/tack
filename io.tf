@@ -26,19 +26,19 @@ variable "coreos-aws" {
   }
 }
 variable "dns-service-ip" { default = "10.3.0.10" }
-variable "etcd-ips" { default = "10.0.10.10,10.0.10.11,10.0.10.12" }
+variable "etcd-ips" { default = "10.0.10.10,10.0.10.11" }
 variable "instance-type" {
   default = {
     bastion = "t2.nano"
     etcd = "m3.medium"
-    worker = "m3.medium"
+    worker = "t2.small"
   }
 }
 variable "internal-tld" {}
 variable "k8s" {
   default = {
     hyperkube-image = "quay.io/coreos/hyperkube"
-    hyperkube-tag = "v1.5.1_coreos.0"
+    hyperkube-tag = "v1.6.0_coreos.0"
   }
 }
 variable "k8s-service-ip" { default = "10.3.0.1" }
