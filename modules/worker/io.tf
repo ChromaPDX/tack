@@ -22,7 +22,6 @@ variable "security-group-id" {}
 variable "subnet-ids" {}
 variable "volume_size" {
   default = {
-    ebs = 250
     root = 52
   }
 }

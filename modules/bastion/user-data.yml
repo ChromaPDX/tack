@@ -22,5 +22,5 @@ coreos:
         RemainAfterExit=yes
         ExecStartPre=-/usr/bin/mkdir -p /opt/bin
         ExecStartPre=/usr/bin/curl -L -o /opt/bin/s3-iam-get \
-          https://raw.githubusercontent.com/kz8s/s3-iam-get/master/s3-iam-get
+          https://raw.githubusercontent.com/ChromaPDX/s3-iam-get/master/s3-iam-get
         ExecStart=/usr/bin/chmod +x /opt/bin/s3-iam-get

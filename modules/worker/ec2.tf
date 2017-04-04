@@ -1,10 +1,4 @@
 resource "aws_launch_configuration" "worker" {
-  ebs_block_device {
-    device_name = "/dev/xvdf"
-    volume_size = "${ var.volume_size["ebs"] }"
-    volume_type = "gp2"
-  }
-
   iam_instance_profile = "${ var.instance-profile-name }"
   image_id = "${ var.ami-id }"
   instance_type = "${ var.instance-type }"
@@ -59,14 +53,14 @@ resource "aws_autoscaling_group" "worker" {
   }
 
   tag {
-    key = "kz8s"
+    key = "k8s"
     value = "${ var.name }"
     propagate_at_launch = true
   }
 
   tag {
     key = "Name"
-    value = "kz8s-worker"
+    value = "k8s-worker"
     propagate_at_launch = true
   }
 

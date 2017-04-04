@@ -7,8 +7,8 @@ resource "aws_vpc" "main" {
   tags {
     builtWith = "terraform"
     KubernetesCluster = "${ var.name }"
-    kz8s = "${ var.name }"
-    Name = "kz8s-${ var.name }"
+    k8s = "${ var.name }"
+    Name = "k8s-${ var.name }"
     version = "${ var.hyperkube-tag }"
     visibility = "private,public"
   }

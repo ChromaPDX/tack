@@ -72,7 +72,7 @@ coreos:
         [Service]
         ExecStartPre=-/usr/bin/mkdir -p /opt/bin
         ExecStart=/usr/bin/curl -L -o /opt/bin/s3-get-presigned-url \
-          https://github.com/kz8s/s3-get-presigned-url/releases/download/v0.1/s3-get-presigned-url_linux_amd64
+          https://github.com/ChromaPDX/s3-get-presigned-url/releases/download/v0.1/s3-get-presigned-url_linux_amd64
         ExecStart=/usr/bin/chmod +x /opt/bin/s3-get-presigned-url
         RemainAfterExit=yes
         Type=oneshot

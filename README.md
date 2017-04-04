@@ -1,7 +1,7 @@
 # terraform-aws-coreos-kubernetes
 
-[![Gitter](https://badges.gitter.im/kz8s/tack.svg)](https://gitter.im/kz8s/tack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![Circle CI](https://circleci.com/gh/kz8s/tack.svg?style=svg)](https://circleci.com/gh/kz8s/tack)
+[![Gitter](https://badges.gitter.im/ChromaPDX/tack.svg)](https://gitter.im/ChromaPDX/tack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Circle CI](https://circleci.com/gh/ChromaPDX/tack.svg?style=svg)](https://circleci.com/gh/ChromaPDX/tack)
 
 Opinionated [Terraform](https://terraform.io) module for creating a Highly Available [Kubernetes](http://kubernetes.io) cluster running on
 [CoreOS](https://coreos.com) (any channel) in an [AWS](https://aws.amazon.com)
@@ -196,7 +196,7 @@ Starting to serve on localhost:8001
 
 ## FAQs
 
-* [Create an etcd cluster with more than 3 instances](https://github.com/kz8s/tack/wiki/How-to:-change-etcd-cluster-size)
+* [Create an etcd cluster with more than 3 instances](https://github.com/ChromaPDX/tack/wiki/How-to:-change-etcd-cluster-size)
 
 ## Advanced Features and Configuration
 

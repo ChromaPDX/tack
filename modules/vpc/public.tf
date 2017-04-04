@@ -4,8 +4,8 @@ resource "aws_internet_gateway" "main" {
   tags {
     builtWith = "terraform"
     KubernetesCluster = "${ var.name }"
-    kz8s = "${ var.name }"
-    Name = "kz8s-${ var.name }"
+    k8s = "${ var.name }"
+    Name = "k8s-${ var.name }"
     version = "${ var.hyperkube-tag }"
   }
 }
@@ -21,8 +21,8 @@ resource "aws_subnet" "public" {
     "kubernetes.io/role/elb" = "${ var.name }"
     builtWith = "terraform"
     KubernetesCluster = "${ var.name }"
-    kz8s = "${ var.name }"
-    Name = "kz8s-${ var.name }-public"
+    k8s = "${ var.name }"
+    Name = "k8s-${ var.name }-public"
     version = "${ var.hyperkube-tag }"
     visibility = "public"
   }

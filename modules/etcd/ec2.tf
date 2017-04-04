@@ -9,7 +9,7 @@ resource "aws_instance" "etcd" {
   private_ip = "${ element(split(",", var.etcd-ips), count.index) }"
 
   root_block_device {
-    volume_size = 124
+    volume_size = 64
     volume_type = "gp2"
   }
 
@@ -20,8 +20,8 @@ resource "aws_instance" "etcd" {
     builtWith = "terraform"
     depends-id = "${ var.depends-id }"
     KubernetesCluster = "${ var.name }" # used by kubelet's aws provider to determine cluster
-    kz8s = "${ var.name }"
-    Name = "kz8s-etcd${ count.index + 1 }"
+    k8s = "${ var.name }"
+    Name = "k8s-etcd${ count.index + 1 }"
     role = "etcd,apiserver"
     version = "${ var.hyperkube-tag }"
     visibility = "private"

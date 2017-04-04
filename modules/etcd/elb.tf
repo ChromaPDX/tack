@@ -1,5 +1,5 @@
 resource "aws_elb" "external" {
-  name = "kz8s-apiserver-${replace(var.name, "/(.{0,17})(.*)/", "$1")}"
+  name = "k8s-apiserver-${replace(var.name, "/(.{0,17})(.*)/", "$1")}"
 
   cross_zone_load_balancing = false
 
@@ -26,8 +26,8 @@ resource "aws_elb" "external" {
 
   tags {
     builtWith = "terraform"
-    kz8s = "${ var.name }"
-    Name = "kz8s-apiserver"
+    k8s = "${ var.name }"
+    Name = "k8s-apiserver"
     role = "apiserver"
     version = "${ var.hyperkube-tag }"
     visibility = "public"
